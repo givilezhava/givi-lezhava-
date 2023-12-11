@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+function replaceLowerCaseWithUpperCase(sentence) {
+    let result = "";
+
+    for (let i = 0; i < sentence.length; i++) {
+        let currentChar = sentence.charAt(i);
+
+        if (currentChar >= 'a' && currentChar <= 'z') {
+            // Convert lowercase to uppercase
+            result += currentChar.toUpperCase();
+        } else {
+            result += currentChar;
+        }
+    }
+
+    return result;
+}
+
+// Example usage:
+let originalSentence = "Convert lowercase characters to uppercase.";
+let modifiedSentence = replaceLowerCaseWithUpperCase(originalSentence);
+
+console.log(modifiedSentence);
+
+
+
+
+    </script>
+</body>
+</html>

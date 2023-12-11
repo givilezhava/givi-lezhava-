@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+function customReplace(original, valueToReplace, valueToReplaceWith) {
+    let result = "";
+    let i = 0;
+
+    while (i < original.length) {
+        if (original.slice(i, i + valueToReplace.length) === valueToReplace) {
+            result += valueToReplaceWith;
+            i += valueToReplace.length;
+        } else {
+            result += original[i];
+            i++;
+        }
+    }
+
+    return result;
+}
+
+// Example usage:
+let originalString = "Hello, valuetoreplace! This is valuetoreplace sample.";
+let replacementResult = customReplace(originalString, "valuetoreplace", "valuewithreplace");
+
+console.log(replacementResult);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function quicksort(arr) {
+    if (arr.length <= 1) {
+        return arr;
+    } else {
+        const pivot = arr[0];
+        const less = arr.slice(1).filter(person => person.age <= pivot.age);
+        const greater = arr.slice(1).filter(person => person.age > pivot.age);
+        return [...quicksort(less), pivot, ...quicksort(greater)];
+    }
+}
+
+// Example usage with names and ages:
+const people = [
+    { name: 'Alice', age: 30 },
+    { name: 'Bob', age: 25 },
+    { name: 'Charlie', age: 35 },
+    { name: 'David', age: 28 },
+    { name: 'Eve', age: 22 }
+];
+
+const sortedPeople = quicksort(people);
+console.log(sortedPeople);
+
+
+    </script>
+</body>
+</html>
